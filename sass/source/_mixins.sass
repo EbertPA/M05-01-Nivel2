@@ -1,0 +1,22 @@
+@mixin contenido-flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin size($ancho, $alto)
+    width: $ancho
+    height: $alto
+
+@mixin keyframes($name)
+    @keyframes #{$name}
+        @content
+
+@mixin transformacion($opacidad, $grados, $scala-y)
+    opacity: $opacidad
+    transform: skew($grados) scaleY($scala-y) translate(0, 0)
+
+@mixin animacion($name, $duration, $color)
+    background-color: $color
+    animation-name: $name
+    animation-duration: $duration
+    animation-timing-function: ease-out
